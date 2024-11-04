@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
-
+@import url('../fonts/suisseintl-book.css');
 /* ZERO STYLES */
 *,
 *::before,
@@ -10,29 +9,38 @@
     box-sizing: border-box;
 }
 
+
 @font-face {
-    font-family: "Suisse Intl";  
-    src: url("../fonts/fonts/suisseintl-book.ttf") format("truetype"); 
+    font-family: "Suisseinl-Book";  
+    src: url("../fonts/suisseintl-book.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: 400;
 }
 
 @font-face {
     font-family: "HeadingNow";  
-    src: url("../fonts/HeadingNowTrial-06Bold.ttf") format("truetype"); 
+    src: url("../fonts/HeadingNow-35Medium.otf") format("truetype"); 
     font-style: normal; 
-    font-weight: 600;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Manrope";  
+    src: url("../fonts/Manrope-Medium.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: 500;
 }
 
 html,
 body {
     height: 100%;
-    font-family: 'Suisse Intl';
+    font-family: 'Suisseinl-Book';
     font-size: 12px;
     font-weight: 400;
     color: #000;
     line-height: 1.2;
     letter-spacing: .0em;
+    background: #FAFAFA;
     display: flex;
     flex-direction: column;
 }
@@ -78,11 +86,18 @@ button {
 }
 
 .wrapper {
-    /* background: #FAFAFA; */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: visible;
 }
 
 .main {
     flex: 1 0 auto;
+}
+
+.main > * {
+    height: 100%;
 }
 
 .content {
@@ -104,21 +119,16 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.constructor.active {
+    opacity: 1;
 }
 
 .inner-title {
     font-size: 25px;
     line-height: 35px;
     letter-spacing: -.06em;
-}
-
-.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateY(0);
 }

@@ -1,20 +1,13 @@
 .main__loading {
 }
 .loading-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
 }
 .loading-page__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100%;
+    padding: 163px 0px 48px 0px;
 }
 .loading-page__loader {
+    margin-bottom: 5px;
 }
 .loader-wrap {
     display: flex;
@@ -41,6 +34,14 @@
     bottom: -10px;
 }
 
+.loading-page__img-wrap {
+    max-height: 367px;
+    max-width: 367px;
+}
+.loading-page__img {
+    height: 100%;
+    width: auto;
+}
 
 @keyframes moveLoader {
     0%, 100% {
