@@ -58,9 +58,11 @@ iframe {
     vertical-align: bottom;
 }
 
+input {
+    outline: none;
+}
 input:focus {
     outline: none;
-    border-color: #838383c7;
 }
 
 button {

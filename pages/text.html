@@ -39,7 +39,7 @@
                         <div class="text-page__slider text-slider">
                             <div class="swiper text-slider__swiper">
                                 <div class="swiper-wrapper text-slider__swiper-wrapper">
-                                    <div class="swiper-slide text-slider__slide">
+                                    <div class="swiper-slide text-slider__slide swiper-slide-active">
                                         <div class="text-slider__card text-card">
                                             <div class="text-card__inner">
                                                 <div class="text-card__text">
@@ -137,6 +137,7 @@
             textSliderWrapper.append(newSlide);
         }
 
+        console.log('Active slide:', document.querySelector('.swiper-slide-active'));
         updateText();
     </script>
 </body>
