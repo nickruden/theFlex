@@ -78,7 +78,7 @@ button {
 }
 
 .wrapper {
-    background: #FAFAFA;
+    /* background: #FAFAFA; */
 }
 
 .main {
@@ -110,4 +110,15 @@ button {
     font-size: 25px;
     line-height: 35px;
     letter-spacing: -.06em;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
