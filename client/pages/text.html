@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheFlex</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/UI/button.css">
+    <link rel="stylesheet" href="../css/UI/input.css">
+    <link rel="stylesheet" href="../css/card.css">
+
+    <link rel="stylesheet" href="../css/pages/text.css">
+</head>
+
+<body class="wrapper">
+    <header class="header">
+        <a href="../main.html" class="logo-link">
+            <div class="logo-wrap">
+                <img src="../imgs/Logo.svg" alt="" class="logo">
+            </div>
+        </a>
+    </header>
+    <main class="main">
+        <div class="main__text text-page">
+            <div class="text-page__container my-container">
+                <div class="text-page__content content">
+                    <div class="text-page__text text">
+                        <h2 class="text-page__title inner-title">Выбери текст</h2>
+                    </div>
+                    <div class="text-page__constructor constructor">
+                        <input class="my-input text-page__my-input" type="text" name="cardText">
+                        <div class="text-page__slider text-slider">
+                            <div class="swiper text-slider__swiper">
+                                <div class="swiper-wrapper text-slider__swiper-wrapper">
+                                    <div class="swiper-slide text-slider__slide">
+                                        <div class="text-slider__card text-card">
+                                            <div class="text-card__inner">
+                                                <div class="text-card__text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-page__design-card-container">
+                            <div class="text-page__design-card design-card">
+                                <div class="design-card__body">
+                                    <div class="design-card__header">
+                                        <div class="design-card__top-text">e-сертификат</div>
+                                            <img src="../imgs/Logo.svg" alt="" class="design-card__logo-img">
+                                    </div>
+                                    <div class="design-card__title">я хочу сходить <br> с тобой на Power Strike</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="" class="e"></a>
+                    <a href="./name.html" class="my-button text-page__button">
+                        <div class="my-button__icon-wrap">
+                            <img src="../imgs/button/arrow.svg" alt="" class="my-button__icon">
+                        </div>
+                        <span class="my-button__text">следующий шаг</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const textSwiper = new Swiper('.text-slider__swiper', {
+            direction: 'horizontal',
+            slidesPerView: 1,
+            spaceBetween: 13,
+            on: {
+                slideChangeTransitionEnd: function () {
+                    updateText();
+                }
+            }
+        });
+
+        function updateText() {
+            const activeSlide = document.querySelector('.swiper-slide-active .text-card__text');
+            const designCardTitle = document.querySelector('.text-page__design-card .design-card__title');
+            const cardTextInput = document.querySelector('.text-page__my-input');
+
+            let slideText = activeSlide.innerHTML.replace(/<br\s*\/?>/gi, '');
+            slideText = slideText.replace(/\s{2,}/g, ' ').trim();
+
+            cardTextInput.value = slideText;
+            designCardTitle.innerHTML = cardTextInput.value;
+            localStorage.setItem('selectedText', cardTextInput.value);
+
+            console.log(cardTextInput.value, localStorage.getItem('activeDesign'), localStorage.getItem('selectedText'))
+        }
+
+        const designCard = document.querySelector('.design-card');
+        const design = localStorage.getItem('activeDesign');
+        designCard.setAttribute('data-design', design);
+
+        const textSliderWrapper = document.querySelector('.text-slider__swiper-wrapper');
+        const textSlide = document.querySelector('.text-slider__slide');
+        const textCardText = document.querySelector('.text-card .text-card__text');
+        console.log(textSlide)
+
+        const arrTexts = [
+            ['ты же обещала, что будем ходить во Флекс вместе'],
+            ['начни уже эти чертовы тренировки'],
+            ['у тебя всё получится'],
+            ['я хочу сходить с тобой на Power Strike'],
+            ['давай помедитируем на йоге вместе? '],
+            ['давай полетаем на SkyFlex?'],
+            ['когда, если не сейчас?'],
+            ['ты такая классная'],
+        ];
+
+        textCardText.innerHTML = arrTexts[0][0];
+        arrTexts.shift();
+
+        for (let texts of arrTexts) {
+            const newSlide = textSlide.cloneNode(true);
+            const newTextCardText = newSlide.querySelector('.text-card__text');
+
+            for (let text of texts) {
+                newTextCardText.innerHTML = text;
+            }
+
+            textSliderWrapper.append(newSlide);
+        }
+
+        updateText();
+    </script>
+</body>
+
+</html>

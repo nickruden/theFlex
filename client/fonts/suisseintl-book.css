@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'SuisseIntl-Book';
+	src: url('../fonts/suisseintl-book.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/suisseintl-book.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/suisseintl-book.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/suisseintl-book.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/suisseintl-book.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/suisseintl-book.svg#suisseintl-book') format('svg'); /* Chrome < 4, Legacy iOS */
+}

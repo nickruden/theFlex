@@ -1,0 +1,24 @@
+.main__result {
+}
+.result-page {
+}
+.result-page__container {
+}
+.result-page__content {
+}
+.result-page__text {
+}
+.result-page__title {
+    margin-bottom: 49px;
+}
+.result-page__constructor {
+    margin-bottom: 69px;
+}
+.result-page__design-card {
+    max-width: 182px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.result-page__design-card-img {
+    width: 100%;
+}
