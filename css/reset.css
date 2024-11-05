@@ -89,7 +89,8 @@ button {
     display: flex;
     flex-direction: column;
     height: 100%;
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 
 .main {
@@ -131,4 +132,138 @@ button {
     font-size: 25px;
     line-height: 35px;
     letter-spacing: -.06em;
+}
+
+.header {
+    padding-top: 29px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+.logo-link {
+}
+.logo-wrap {
+}
+.logo {
+}
+.my-button {
+    display: flex;
+    align-items: center;
+    width: 190px;
+    max-height: 34px;
+    padding: 3px;
+    background: #FCFCFC;
+    font-family: 'Manrope';
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 10px;
+    letter-spacing: -.02em;
+    color: #000;
+    text-transform: lowercase;
+    border-radius: 1000px;
+    box-shadow: 0px 8px 24px 0px #2D2D2D26;
+    position: relative;
+}
+.my-button__icon-wrap {
+    height: 28px;
+    width: 28px;
+    background: #E8FF21;
+    border-radius: 50%;
+    margin-right: 5px;
+    position: relative;
+}
+.my-button__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.my-button__text {
+    display: block;
+    width: 70%;
+    text-align: center;
+}
+/* .my-button::before {
+    content: '';
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+    position: relative;
+    background: #E8FF21;
+    border-radius: 50%;
+    margin-right: 9px;
+}
+.my-button::after {
+    content: url('../../imgs/button/lightning.svg');
+    position: absolute;
+    left: 11px;
+} */
+.my-input {
+    width: 100%;
+    max-width: 400px;
+    font-family: 'Manrope';
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -.02em;
+    color: #a5a5a5;
+    padding: 11px;
+    border: none;
+    box-shadow: 0px 8px 24px 0px rgba(45, 45, 45, 0.15);
+    background: #FCFCFC;
+    border-radius: 10px;
+}
+.my-input::placeholder {
+    color: #d3d3d3;
+}
+.design-card {
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    user-select: none;
+}
+.design-card__body {
+    position: relative;
+}
+.design-card__img {
+    width: 100%;
+}
+.design-card__logo-img {
+    height: 3px;
+    width: 27px;
+}
+.design-card__title {
+    position: absolute;
+    top: 40px;
+    left: 11px;
+    max-width: 138px;
+    font-family: 'HeadingNow';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 29.0098px;
+    line-height: 88%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: #383838;
+}
+
+.design-card[data-design="1"] .design-card__title {
+    color: #1957A4;
+}
+.design-card[data-design="2"] .design-card__title {
+    color: #FFE3E9;
+}
+.design-card[data-design="3"] .design-card__title {
+    color: #FFFFFF;
+}
+.design-card[data-design="4"] .design-card__title {
+    color: #121212;
+}
+.design-card[data-design="5"] .design-card__title {
+    color: #FFE3E9;
+}
+.design-card[data-design="6"] .design-card__title {
+    color: #FFABCA;
+}
+.design-card[data-design="7"] .design-card__title {
+    color: #121212;
 }
