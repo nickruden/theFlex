@@ -1,6 +1,8 @@
 .main__result {
 }
 .result-page {
+    position: relative;
+    z-index: 2;
 }
 .result-page__container {
 }
@@ -38,4 +40,39 @@
     display: block;
     width: 60%;
     text-align: center;
+}
+
+.result-page__background-imgs {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+}
+.result-page__background-imgs > * {
+    position: absolute;
+    z-index: 5;
+}
+.result-page__jump-rope-img {
+    max-height: 110px;
+    top: 10px;
+    left: -47px;
+    transform: rotate(8.58deg);
+    position: absolute;
+}
+.result-page__blue-ball-img {
+    top: 10px;
+    left: 66.7%;
+    max-height: 165px;
+}
+.result-page__dumbbells-img {
+    max-height: 85px;
+    bottom: 148px;
+    left: -53px;
+}
+.result-page__pink-bottle-img {
+    max-height: 203px;
+    bottom: -68px;
+    right: 10px;
+    transform: rotate(14.65deg);
 }
