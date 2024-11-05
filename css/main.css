@@ -1,3 +1,6 @@
+.wrapper {
+    position: relative;
+}
 .main-page {
     padding-top: 118px;
     padding-bottom: 224px;
@@ -146,7 +149,7 @@
     overflow: hidden;
 }
 
-.main__background-images>* {
+.main__background-images > * {
     position: absolute;
 }
 
@@ -155,6 +158,7 @@
     left: -30px;
     transform: rotate(21.45deg);
     position: absolute;
+    max-height: 290px;
 }
 
 .main__gray-back-img {
