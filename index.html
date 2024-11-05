@@ -310,8 +310,11 @@
 
                 activeDesign = activeSlide.getAttribute('data-design');
                 activeDesignImg = activeSlide.querySelector('.design-card__img').getAttribute('src');
-
+            
                 designInput.value = activeDesign;
+
+                sessionStorage.setItem('data-design-active', activeDesign);
+                sessionStorage.setItem('design-active-img', activeDesignImg);
 
                 console.log(designInput.value, activeDesignImg);
             };
@@ -399,8 +402,8 @@
             const setupTextPage = () => {
                 const designCard = document.querySelector('.text-page__design-card.design-card');
                 const designCardImg2 = designCard.querySelector('.design-card__img');
-                designCard.setAttribute('data-design', activeDesign);
-                designCardImg2.setAttribute('src', activeDesignImg);
+                designCard.setAttribute('data-design', sessionStorage.getItem('data-design-active'));
+                designCardImg2.setAttribute('src', sessionStorage.getItem('design-active-img'));
 
                 const textSliderWrapper = document.querySelector('.text-slider__swiper-wrapper');
                 const textSlide = document.querySelector('.text-slider__slide');
