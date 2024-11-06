@@ -606,26 +606,26 @@
             }
         });
 
-        document.querySelector('.result-page__link').addEventListener('click', function (e) {
-            e.preventDefault();
+        // document.querySelector('.result-page__link').addEventListener('click', function (e) {
+        //     e.preventDefault();
 
-            const url = this.href;
-            const fileName = url.split('/').pop();
-            console.log(url)
-            fetch(url, { method: 'GET', mode: 'cors' })
-                .then(response => response.blob())
-                .then(blob => {
-                    const link = document.createElement('a');
-                    link.href = URL.createObjectURL(blob);
-                    link.download = fileName;
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                })
-                .catch(error => {
-                    console.error('Ошибка при скачивании файла:', error);
-                });
-        });
+        //     const url = this.href;
+        //     const fileName = url.split('/').pop();
+        //     console.log(url)
+        //     fetch(url, { method: 'GET', mode: 'cors' })
+        //         .then(response => response.blob())
+        //         .then(blob => {
+        //             const link = document.createElement('a');
+        //             link.href = URL.createObjectURL(blob);
+        //             link.download = fileName;
+        //             document.body.appendChild(link);
+        //             link.click();
+        //             document.body.removeChild(link);
+        //         })
+        //         .catch(error => {
+        //             console.error('Ошибка при скачивании файла:', error);
+        //         });
+        // });
     });
 </script>
 </body>
