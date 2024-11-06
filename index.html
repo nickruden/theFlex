@@ -237,6 +237,12 @@
                             </div>
                             <span class="my-button__text">Скачать</span>
                         </a>
+                        <a href="" class="result-page__link2 result-page__link my-button" download style="z-index:7;margin-top:5px">
+                            <div class="my-button__icon-wrap">
+                                <img src="../imgs/button/lightning.svg" alt="" class="my-button__icon">
+                            </div>
+                            <span class="my-button__text">Скачать(через запрос)</span>
+                        </a>
                     </div>
                     <div class="result-page__background-imgs">
                         <img src="./imgs/blue-ball.png" alt="" class="result-page__blue-ball-img">
@@ -388,12 +394,14 @@
             const queryString = new URLSearchParams(data).toString();
 
             const url = `https://nikolajgromkov.ru/flex/?${queryString}`;
+            console.log(url)
 
             fetch(url, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
-                }
+                },
+                mode: 'no-cors'
             })
                 .then(response => {
                     if (!response.ok) {
@@ -413,9 +421,11 @@
 
                     const imgElement = document.querySelector('.result-page__design-card-img');
                     const downloadLink = document.querySelector('.result-page__link');
+                    const downloadLink2 = document.querySelector('.result-page__link2');
 
                     imgElement.src = dataImg;
                     downloadLink.href = dataImg;
+                    downloadLink2.href = dataImg;
 
                     sessionStorage.setItem('dataImgStorage', dataImg);
                 })
@@ -465,15 +475,18 @@
         const setupResultPage = () => {
             const imgElement = document.querySelector('.result-page__design-card-img');
             const downloadLink = document.querySelector('.result-page__link');
+            const downloadLink2 = document.querySelector('.result-page__link2');
 
             dataImg = sessionStorage.getItem('dataImgStorage');
             console.log(dataImg);
 
             imgElement.src = dataImg;
             downloadLink.href = dataImg;
+            downloadLink2.href = dataImg;
 
             const fileName = dataImg.split('/').pop();
             downloadLink.download = fileName;
+            downloadLink2.download = fileName;
             console.log(document.querySelector('.result-page__link'));
         };
 
@@ -606,26 +619,26 @@
             }
         });
 
-        // document.querySelector('.result-page__link').addEventListener('click', function (e) {
-        //     e.preventDefault();
+        document.querySelector('.result-page__link2').addEventListener('click', function (e) {
+            e.preventDefault();
 
-        //     const url = this.href;
-        //     const fileName = url.split('/').pop();
-        //     console.log(url)
-        //     fetch(url, { method: 'GET', mode: 'cors' })
-        //         .then(response => response.blob())
-        //         .then(blob => {
-        //             const link = document.createElement('a');
-        //             link.href = URL.createObjectURL(blob);
-        //             link.download = fileName;
-        //             document.body.appendChild(link);
-        //             link.click();
-        //             document.body.removeChild(link);
-        //         })
-        //         .catch(error => {
-        //             console.error('Ошибка при скачивании файла:', error);
-        //         });
-        // });
+            const url = this.href;
+            const fileName = url.split('/').pop();
+            console.log(url)
+            fetch(url, { method: 'GET' })
+                .then(response => response.blob())
+                .then(blob => {
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(blob);
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                })
+                .catch(error => {
+                    console.error('Ошибка при скачивании файла:', error);
+                });
+        });
     });
 </script>
 </body>
