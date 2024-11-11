@@ -865,7 +865,7 @@ button {
     font-size: 18px;
     line-height: 20px;
     letter-spacing: -.02em;
-    color: #DFDFDF;
+    color: #343537;
     padding: 11px;
     border: none;
     box-shadow: 0px 8px 24px 0px rgba(45, 45, 45, 0.15);
@@ -920,6 +920,11 @@ button {
     appearance: none;
     -webkit-appearance: none;
     padding-right: 30px;
+}
+
+.my-select:focus {
+    border: 2px solid #e8ff21; 
+    outline: none; 
 }
 
 .custom-arrow {
@@ -1429,6 +1434,7 @@ button {
     animation: moveLoader .7s infinite ease-in-out;
     order: 2;
     bottom: -10px;
+    z-index: 7;
 }
 
 .loading-page__img-wrap {
