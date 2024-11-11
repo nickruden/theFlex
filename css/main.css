@@ -146,7 +146,7 @@
     overflow: hidden
 }
 
-.main__background-images>* {
+.main__background-images > * {
     position: absolute
 }
 
@@ -260,6 +260,29 @@
         font-size: 10px;
         line-height: 10px;
     }
+
+    .main__pink-bottle-img {
+        width: 117px;
+        height: 346px
+    }
+
+    .main__blue-ball-img {
+        height: 223px;
+    }
+
+    .main__bag-img {
+        bottom: -45px;
+        right: -218px;
+        width: 416px;
+        height: 416px;
+    }
+    
+    .main__card-img {
+        bottom: -109px;
+        left: -17px;
+        height: 392px;
+        width: 208px
+    }
 }
 
 @media (width >= 430px) {
@@ -341,5 +364,30 @@
     .reposts__text {
         font-size: 12px;
         line-height: 12px;
+    }
+
+    .main__pink-bottle-img {
+        width: 137px;
+        height: 446px;
+        left: -51px;
+    }
+    
+    .main__blue-ball-img {
+        top: -81px;
+        height: 279px;
+    }
+    
+    .main__bag-img {
+        bottom: -45px;
+        right: -226px;
+        width: 458px;
+        height: 458px
+    }
+    
+    .main__card-img {
+        bottom: -109px;
+        left: -17px;
+        height: 430px;
+        width: 237px;
     }
 }

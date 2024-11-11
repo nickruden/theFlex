@@ -108,10 +108,10 @@
 }
 
 .result-page__dumbbells-img {
-    width: 86px;
-    height: 85px;
-    bottom: 148px;
-    left: -25px
+    width: 92px;
+    height: 91px;
+    top: 395px;
+    left: -28px
 }
 
 .result-page__pink-bottle-img {
@@ -143,6 +143,36 @@
     .result-page__link {
         width: 174px;
     }
+
+    .result-page__jump-rope-img {
+        max-height: 181px;
+        width: 152px;
+        height: 152px;
+        top: -6px;
+        left: -63px;
+    }
+    
+    .result-page__blue-ball-img {
+        top: 10px;
+        left: 67%;
+        height: 209px;
+        max-height: 261px;
+    }
+    
+    .result-page__dumbbells-img {
+        width: 127px;
+        height: 126px;
+        top: 476px;
+        left: -58px;
+        max-height: none;
+    }
+    
+    .result-page__pink-bottle-img {
+        height: 260px;
+        bottom: -71px;
+        right: -10px;
+        max-height: none;
+    }
 }
 
 @media (min-width: 430px) {
@@ -167,5 +197,35 @@
     }
     .result-page__link {
         width: 208px;
+    }
+
+    .result-page__jump-rope-img {
+        max-height: 181px;
+        width: 181px;
+        height: 181px;
+        top: -6px;
+        left: -83px;
+    }
+    
+    .result-page__blue-ball-img {
+        top: 10px;
+        left: 66.7%;
+        height: 261px;
+        max-height: 261px;
+    }
+    
+    .result-page__dumbbells-img {
+        width: 157px;
+        height: 156px;
+        top: 562px;
+        left: -81px;
+        max-height: none;
+    }
+    
+    .result-page__pink-bottle-img {
+        height: 341px;
+        bottom: -71px;
+        right: -10px;
+        max-height: none;
     }
 }
