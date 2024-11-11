@@ -586,7 +586,7 @@
             };
 
             document.querySelector('.name-page__my-input').addEventListener('input', validateName);
-
+            
             const currentPage = sessionStorage.getItem('currentPage') || 'main-page';
             sessionStorage.setItem('currentPage', currentPage);
             setBackground(currentPage);
