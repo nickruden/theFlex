@@ -405,7 +405,7 @@ button {
 }
 
 
-@media (width >= 375px) {
+@media (width >= 375px) and (min-resolution: 2dppx) {
     .main-page {
         padding-top: 143px;
         padding-bottom: 293px;
@@ -505,7 +505,7 @@ button {
     }
 }
 
-@media (width >= 430px) {
+@media (width >= 430px) and (max-resolution: 2dppx) {
     .main-page {
         padding-top: 192px;
         padding-bottom: 357px;
