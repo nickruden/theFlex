@@ -391,7 +391,7 @@
     }
 }
 
-@media (min-height: 700px) and (min-resolution: 192dpi) {
+@media (min-height: 700px) {
     .main-page {
         padding-top: 120px;
         padding-bottom: 252px
@@ -437,7 +437,7 @@
     }
 }
 
-@media (min-height:645px) and (max-height:699px) and (min-resolution: 192dpi) {
+@media (min-height:645px) and (max-height:699px) {
     .main-page {
         padding-top: 119px;
         padding-bottom: 194px
@@ -483,7 +483,7 @@
     }
 }
 
-@media (min-height:550px) and (max-height:644px) and (min-resolution: 192dpi) {
+@media (min-height:550px) and (max-height:644px) {
     .main-page {
         padding-top: 133px;
         padding-bottom: 144px
