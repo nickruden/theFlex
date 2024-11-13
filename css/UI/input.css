@@ -14,7 +14,7 @@
 }
 
 .my-input::placeholder {
-    color: #d3d3d3;
+    color: #343537;
 }
 
 @media (min-width: 375px) {
