@@ -27,7 +27,7 @@
     }
 }
 
-@media (min-width: 430px) {
+@media (min-width: 450px) {
     .my-input {
         font-size: 21px;
         line-height: 24px;

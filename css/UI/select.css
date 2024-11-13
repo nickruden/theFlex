@@ -52,7 +52,7 @@
     }
 }
 
-@media (min-width: 430px) {
+@media (min-width: 450px) {
     .my-select {
         font-size: 21px;
         line-height: 24px;

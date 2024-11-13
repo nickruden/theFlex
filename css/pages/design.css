@@ -56,7 +56,7 @@
 
 @media (min-width: 375px) {
     .design-page__text {
-        margin-bottom: 72px;
+        margin-bottom: 36px;
     }
 
     .design-page__constructor {
@@ -83,7 +83,7 @@
     }
 }
 
-@media (min-width: 430px) {
+@media (min-width: 450px) {
     .design-page__text {
         margin-bottom: 95px;
     }
@@ -109,5 +109,93 @@
     .design-slider__slide.swiper-slide-active {
         background: #FCFCFC;
         box-shadow: 0px 12px 36px 0px rgba(45, 45, 45, 0.15);
+    }
+}
+
+@media (min-height: 700px) and (min-resolution: 192dpi) {
+    .design-page__constructor {
+        margin-bottom: 25px;
+    }
+    .design-slider__swiper {
+        width: 206px;
+    }
+    .design-slider__swiper-wrapper {
+        margin-bottom: 26px;
+    }
+    .design-slider__slide {
+        height: 354px;
+        border-radius: 20px;
+        padding: 9px;
+    }
+}
+
+@media (min-height:645px) and (max-height:699px) and (min-resolution: 192dpi) {
+    .design-page__constructor {
+        margin-bottom: 25px;
+    }
+    .design-slider__swiper {
+        width: 206px;
+    }
+    .design-slider__swiper-wrapper {
+        margin-bottom: 26px;
+    }
+    .design-slider__slide {
+        height: 354px;
+        border-radius: 20px;
+        padding: 9px;
+    }
+}
+
+@media (min-height:550px) and (max-height:644px) and (min-resolution: 192dpi) {
+    .design-page__content {
+        padding-top: 52px;
+        padding-bottom: 24px;
+    }
+
+    .design-page__constructor {
+        margin-bottom: 23px;
+    }
+
+    .design-page__text {
+        margin-bottom: 26px;
+    }
+
+    .design-slider__swiper {
+        width: 156px;
+    }
+    .design-slider__swiper-wrapper {
+        margin-bottom: 26px;
+    }
+    .design-slider__slide {
+        height: 267px;
+        border-radius: 15px;
+        padding: 7px;
+    }
+}
+
+@media (max-height:549px) {
+    .design-page__content {
+        padding-top: 32px;
+        padding-bottom: 22px;
+    }
+
+    .design-page__constructor {
+        margin-bottom: 18px;
+    }
+
+    .design-page__text {
+        margin-bottom: 26px;
+    }
+
+    .design-slider__swiper {
+        width: 156px;
+    }
+    .design-slider__swiper-wrapper {
+        margin-bottom: 26px;
+    }
+    .design-slider__slide {
+        height: 267px;
+        border-radius: 15px;
+        padding: 7px;
     }
 }

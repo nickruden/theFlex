@@ -53,15 +53,15 @@
     }
 
     .design-card__title {
-        top: 50px;
+        top: 40px;
         left: 13px;
-        max-width: 176px;
-        font-weight: 400;
-        font-size: 36px;
-    }
+        max-width: 154px;
+    font-weight: 400;
+    font-size: 31px;
+}
 }
 
-@media (min-width: 430px) {
+@media (min-width: 450px) {
     .design-card {
         border-radius: 15px;
     }

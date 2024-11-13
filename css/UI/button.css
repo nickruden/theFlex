@@ -67,7 +67,7 @@
     .back-button {
         font-size: 11px;
         line-height: 16px;
-        margin-top: 12px;
+        margin-top: 10px;
     }
     .my-button__icon-wrap {
         height: 35px;
@@ -79,7 +79,7 @@
     }
 }
 
-@media (min-width: 430px) {
+@media (min-width: 450px) {
     .my-button {
         width: 290px;
         max-height: 51px;
@@ -91,7 +91,7 @@
     .back-button {
         font-size: 12px;
         line-height: 21px;
-        margin-top: 15px;
+        margin-top: 13px;
     }
     .my-button__icon-wrap {
         height: 42px;
